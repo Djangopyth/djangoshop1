@@ -9,7 +9,7 @@ class Post(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
-    images=models.ImageField()
+    images=models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=100)
 
     def publish(self):
         self.published_date = timezone.now()
