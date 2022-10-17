@@ -6,7 +6,11 @@
     <title>Djangoshop</title>
 </head>
 <body>
+{% for post in posts %}
 
-    <p>How are you!</p>
+    <p>Online store</p>
+    <h1>{{post.text}}</h1>
+    <h2>Описание:{{post.title}}</h2>
+{%endfor%}
 </body>
 </html>
